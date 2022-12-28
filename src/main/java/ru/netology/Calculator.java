@@ -51,7 +51,7 @@ public class Calculator {
 
         public double result() {
             if (result == null)
-                throw new IllegalStateException("Не корректная формула");
+                throw new IllegalStateException("Не корректное значение");
             return result;
         }
     }
