@@ -21,14 +21,14 @@ public class Calculator {
             } else if (b == null) {
                 b = operand;
             } else {
-                throw new IllegalStateException("Формула заполненна");
+                throw new IllegalStateException("Formula is full of operands");
             }
             return this;
         }
 
         public Formula calculate(Operation op) {
             if (a == null || b == null)
-                throw new IllegalStateException("Недостаточно значений");
+                throw new IllegalStateException("Not enough operands!");
             switch (op) {
                 case SUM:
                     result = a + b;
@@ -51,7 +51,7 @@ public class Calculator {
 
         public double result() {
             if (result == null)
-                throw new IllegalStateException("Не корректное значение");
+                throw new IllegalStateException("Formula is not computed!");
             return result;
         }
     }
